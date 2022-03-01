@@ -20,6 +20,7 @@ echo "
 ";
 
 
+
 if [ "$PREFIX" = "/data/data/com.termux/files/usr" ]; then
     INSTALL_DIR="$PREFIX/usr/share/doc/AnonfilesUploader"
     BIN_DIR="$PREFIX/bin/"
@@ -38,7 +39,7 @@ else
     BASH_PATH="/bin/bash"
     TERMUX=false
 
-    sudo apt-get install -y git python3
+    sudo apt-get install -y git python2.7
 fi
 
 echo "[✔] Checking directories...";
@@ -71,10 +72,10 @@ fi
 
 echo "[✔] Installing ...";
 echo "";
-git clone --depth=1 https://github.com/sionka5/AnonfilesUploader "$INSTALL_DIR";
+git clone --depth=1 https://github.com/sionka5/AnonfilesUploader"$INSTALL_DIR";
 echo "#!$BASH_PATH
 python $INSTALL_DIR/AnonfilesUploader.py" "${1+"$@"}" > "$INSTALL_DIR/AnonfilesUploader";
-chmod +x "$INSTALL_DIR/AnonfilesUploader";
+chmod +x "$INSTALL_DIR/fsociety";
 
 fi
 rm "$INSTALL_DIR/AnonfilesUploader";
@@ -86,7 +87,7 @@ then
     echo "[✔] Tool installed successfully! [✔]";
     echo "";
     echo "[✔]====================================================================[✔]";
-    echo "[✔]  All is done!! You can execute tool by typing AnonfilesUploader !  [✔]";
+    echo "[✔]      All is done!! You can execute tool by typing fsociety !       [✔]";
     echo "[✔]====================================================================[✔]";
     echo "";
 else
