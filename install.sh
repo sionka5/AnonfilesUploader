@@ -88,7 +88,7 @@ then
     echo "[✔] Tool installed successfully! [✔]";
     echo "";
     echo "[✔]====================================================================[✔]";
-    echo "[✔]    All is done!! You can execute tool by typing  ! anonuploader    [✔]";
+    echo "[✔]   All is done!! You can execute tool by typing  ! anonfilesuploader[✔]";
     echo "[✔]====================================================================[✔]";
     echo "";
 else
