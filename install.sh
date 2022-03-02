@@ -70,7 +70,7 @@ echo "[✔] Installing ...";
 echo "";
 git clone --depth=1 https://github.com/Sionka5/AnonfilesUploader "$INSTALL_DIR";
 echo "#!$BASH_PATH
-python $INSTALL_DIR/AnonUploader.py" "${1+"$@"}" > "$INSTALL_DIR/anonfilesuploader";
+python $INSTALL_DIR/AnonfilesUploader.py" "${1+"$@"}" > "$INSTALL_DIR/anonfilesuploader";
 chmod +x "$INSTALL_DIR/anonfilesuploader";
 if [ "$TERMUX" = true ]; then
     cp "$INSTALL_DIR/anonfilesuploader" "$BIN_DIR"
