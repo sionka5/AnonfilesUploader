@@ -6,16 +6,13 @@ url = 'https://api.anonfiles.com/upload'
 file = input("File name: ")
 files = {'file':(file, open(file, 'rb'))}
 r = requests.post(url, files=files)
-status = "true"
 
 
+template = {"status": True}
+template_status = template['status']
 
 with open('outputfile.json', 'w') as f:
     f.write(r.text)
-
-with open("template.json", "r") as template:
-    jsondata = json.load(template)
-    template_status = jsondata['status']
 
 with open("outputfile.json", "r") as read_file:
     jsondata = json.load(read_file)
